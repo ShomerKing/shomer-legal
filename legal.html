@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shomer — Legal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
+    header { background: linear-gradient(135deg, #1a1f2e, #252a3a); padding: 20px 40px; border-bottom: 1px solid #2a2f40; display: flex; align-items: center; gap: 16px; }
+    header h1 { font-size: 22px; color: #7c9fff; font-weight: 700; }
+    header p { font-size: 12px; color: #555; }
+    .tabs { display: flex; background: #13161f; border-bottom: 1px solid #2a2f40; padding: 0 40px; }
+    .tab { padding: 14px 24px; font-size: 13px; color: #555; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; }
+    .tab.active { color: #7c9fff; border-bottom-color: #7c9fff; }
+    .tab:hover:not(.active) { color: #aaa; }
+    .content { max-width: 800px; margin: 0 auto; padding: 40px 20px; display: none; }
+    .content.active { display: block; }
+    h2 { font-size: 28px; color: #7c9fff; margin-bottom: 6px; }
+    .updated { font-size: 12px; color: #555; margin-bottom: 32px; }
+    h3 { font-size: 16px; color: #e0e0e0; margin: 28px 0 10px; border-left: 3px solid #7c9fff; padding-left: 12px; }
+    p { font-size: 14px; color: #aaa; margin-bottom: 12px; }
+    ul, ol { margin: 8px 0 14px 20px; }
+    li { font-size: 14px; color: #aaa; margin-bottom: 6px; }
+    strong { color: #e0e0e0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+    th { background: #1a1f2e; color: #7c9fff; padding: 10px 12px; text-align: left; border: 1px solid #2a2f40; }
+    td { padding: 10px 12px; border: 1px solid #2a2f40; color: #aaa; vertical-align: top; }
+    td a { color: #7c9fff; }
+    .highlight { background: #1a1f2e; border: 1px solid #2a2f40; border-radius: 8px; padding: 14px 16px; margin: 16px 0; font-size: 13px; color: #aaa; }
+    .warning { background: #2b220d; border: 1px solid #8b6a1a; border-radius: 8px; padding: 14px 16px; margin: 16px 0; font-size: 13px; color: #ff9800; }
+    hr { border: none; border-top: 1px solid #2a2f40; margin: 28px 0; }
+    footer { text-align: center; padding: 32px; font-size: 12px; color: #333; border-top: 1px solid #1e2335; margin-top: 40px; }
+    a { color: #7c9fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>🛡️ SHOMER</h1>
+      <p>Your email guardian</p>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('privacy')">Privacy Policy</div>
+    <div class="tab" onclick="showTab('terms')">Terms of Service</div>
+  </div>
+
+  <!-- Privacy Policy -->
+  <div class="content active" id="privacy">
+    <h2>Privacy Policy</h2>
+    <div class="updated">Last updated: June 2026</div>
+
+    <div class="highlight">Shomer is built on a simple principle: <strong>protect your inbox without compromising your privacy.</strong> We process your data to keep you safe — never to profile, track, or monetize you.</div>
+
+    <h3>1. What Data We Collect</h3>
+    <p><strong>Data processed temporarily (never stored permanently):</strong></p>
+    <ul>
+      <li><strong>Email subject line</strong> — used for phishing analysis</li>
+      <li><strong>Sender email address and domain</strong> — used to check domain reputation</li>
+      <li><strong>Email body text</strong> — <strong>automatically sanitized before processing.</strong> Phone numbers, credit card numbers, ID numbers, passwords, and IP addresses are replaced with placeholders before leaving your device</li>
+      <li><strong>URLs found in the email</strong> — scanned for malware and phishing</li>
+      <li><strong>File hashes (SHA-256)</strong> of attachments — the actual file content is never uploaded unless VirusTotal requires it for unknown files</li>
+      <li><strong>SPF and DKIM headers</strong> — read locally, never stored</li>
+    </ul>
+    <p><strong>Data stored locally on your device only:</strong></p>
+    <ul>
+      <li>Scan history (last 10 scans)</li>
+      <li>Whitelist and blacklist of domains you define</li>
+      <li>Sender memory</li>
+      <li>Scan statistics and your settings</li>
+    </ul>
+
+    <h3>2. What We Do NOT Collect</h3>
+    <ul>
+      <li>We do <strong>not</strong> store email content on our servers</li>
+      <li>We do <strong>not</strong> store your email address or personal identity</li>
+      <li>We do <strong>not</strong> read emails you haven't opened</li>
+      <li>We do <strong>not</strong> access your Gmail credentials</li>
+      <li>We do <strong>not</strong> sell or share your data with advertisers</li>
+      <li>We do <strong>not</strong> track your browsing history</li>
+    </ul>
+
+    <h3>3. Third-Party Services</h3>
+    <table>
+      <tr><th>Service</th><th>Purpose</th><th>Data Sent</th><th>Privacy Policy</th></tr>
+      <tr><td><strong>VirusTotal</strong></td><td>URL and file scanning</td><td>URL or file hash</td><td><a href="https://www.virustotal.com/gui/privacy-policy" target="_blank">virustotal.com</a></td></tr>
+      <tr><td><strong>Google Safe Browsing</strong></td><td>URL threat detection</td><td>URL</td><td><a href="https://policies.google.com/privacy" target="_blank">google.com</a></td></tr>
+      <tr><td><strong>Groq AI</strong></td><td>Email phishing analysis</td><td>Sanitized email content</td><td><a href="https://groq.com/privacy-policy/" target="_blank">groq.com</a></td></tr>
+      <tr><td><strong>Supabase</strong></td><td>Community trust data</td><td>Domain name + risk rating only</td><td><a href="https://supabase.com/privacy" target="_blank">supabase.com</a></td></tr>
+      <tr><td><strong>WhoIsXML API</strong></td><td>Domain age lookup</td><td>Domain name only</td><td><a href="https://www.whoisxmlapi.com/privacy-policy.aspx" target="_blank">whoisxmlapi.com</a></td></tr>
+    </table>
+
+    <h3>4. Data Retention</h3>
+    <ul>
+      <li><strong>Our servers:</strong> Email content is processed in real-time and not stored. Results are cached in memory for up to 1 hour, then discarded automatically.</li>
+      <li><strong>Your device:</strong> All local data can be cleared at any time from Settings → Clear all data.</li>
+      <li><strong>Community Trust (Supabase):</strong> Only domain names and aggregated risk counts are stored. No personal data.</li>
+    </ul>
+
+    <h3>5. Your Rights</h3>
+    <ul>
+      <li><strong>Access</strong> your data — visible in History and Reports</li>
+      <li><strong>Delete</strong> all local data — Settings → Clear all data</li>
+      <li><strong>Opt out</strong> of community trust reporting — Settings → Privacy</li>
+    </ul>
+
+    <h3>6. Security</h3>
+    <ul>
+      <li>All communication uses HTTPS</li>
+      <li>Personal information is sanitized on your device before transmission</li>
+      <li>We do not log individual scan requests or link them to user identities</li>
+    </ul>
+
+    <h3>7. Contact</h3>
+    <p>For privacy questions: <a href="mailto:privacy@shomer.app">privacy@shomer.app</a></p>
+  </div>
+
+  <!-- Terms of Service -->
+  <div class="content" id="terms">
+    <h2>Terms of Service</h2>
+    <div class="updated">Last updated: June 2026</div>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By installing or using Shomer, you agree to these Terms. If you do not agree, do not use the Service.</p>
+
+    <h3>2. Description of Service</h3>
+    <p>Shomer is a Chrome extension providing email security analysis, link scanning, and file attachment scanning to help protect users from phishing and malware.</p>
+
+    <h3>3. Permitted and Prohibited Use</h3>
+    <p>You may use Shomer for personal, non-commercial email security purposes.</p>
+    <p>You may <strong>not</strong>:</p>
+    <ul>
+      <li>Scan emails or files without authorization</li>
+      <li>Reverse-engineer or decompile the extension</li>
+      <li>Circumvent rate limits or abuse the scanning infrastructure</li>
+      <li>Use the Service for any illegal purpose</li>
+    </ul>
+
+    <h3>4. Disclaimer of Warranties</h3>
+    <div class="warning">⚠️ Shomer is provided "as is" without any warranties. All results are <strong>recommendations only</strong> — not definitive security advice. Shomer may produce false positives or false negatives. Security decisions must never rely solely on Shomer. You are solely responsible for any actions taken based on Shomer's output.</div>
+
+    <h3>5. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by law, Shomer and its developers are <strong>not liable</strong> for any direct, indirect, incidental, or consequential damages, security breaches, financial losses, or actions taken based on scan results — whether correct or incorrect. This applies even if Shomer has been advised of the possibility of such damages.</p>
+
+    <h3>5a. Indemnification</h3>
+    <p>You agree to indemnify and hold harmless Shomer and its developers from any claims arising from your use of the Service or decisions made based on its recommendations.</p>
+
+    <h3>6. Third-Party Services</h3>
+    <p>Shomer relies on VirusTotal, Google Safe Browsing, Groq AI, and Supabase. We are not responsible for their availability or accuracy. Their respective terms apply.</p>
+
+    <h3>7. Community Trust Index</h3>
+    <p>By using Shomer, you anonymously contribute domain reputation data. You can opt out at any time via Settings. Community trust scores are for informational purposes only.</p>
+
+    <h3>8. Updates</h3>
+    <p>We may update these Terms at any time. Continued use constitutes acceptance.</p>
+
+    <h3>9. Governing Law</h3>
+    <p>These Terms are governed by the laws of the State of Israel.</p>
+
+    <h3>10. Contact</h3>
+    <p>For questions: <a href="mailto:legal@shomer.app">legal@shomer.app</a></p>
+  </div>
+
+  <footer>
+    🛡️ Shomer Email Guardian · Protecting your inbox, respecting your privacy
+  </footer>
+
+  <script>
+    function showTab(tab) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tab).classList.add('active');
+    }
+  </script>
+</body>
+</html>
