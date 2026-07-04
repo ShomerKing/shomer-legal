@@ -1,379 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shomer — Legal</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
-    header { background: linear-gradient(135deg, #1a1f2e, #252a3a); padding: 20px 40px; border-bottom: 1px solid #2a2f40; display: flex; align-items: center; gap: 16px; }
-    header h1 { font-size: 22px; color: #7c9fff; font-weight: 700; }
-    header p { font-size: 12px; color: #555; }
-    .tabs { display: flex; background: #13161f; border-bottom: 1px solid #2a2f40; padding: 0 40px; }
-    .tab { padding: 14px 24px; font-size: 13px; color: #555; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; }
-    .tab.active { color: #7c9fff; border-bottom-color: #7c9fff; }
-    .tab:hover:not(.active) { color: #aaa; }
-    .content { max-width: 800px; margin: 0 auto; padding: 40px 20px; display: none; }
-    .content.active { display: block; }
-    h2 { font-size: 28px; color: #7c9fff; margin-bottom: 6px; }
-    .updated { font-size: 12px; color: #555; margin-bottom: 32px; }
-    h3 { font-size: 16px; color: #e0e0e0; margin: 28px 0 10px; border-left: 3px solid #7c9fff; padding-left: 12px; }
-    h4 { font-size: 14px; color: #aaa; margin: 16px 0 8px; }
-    p { font-size: 14px; color: #aaa; margin-bottom: 12px; }
-    ul, ol { margin: 8px 0 14px 20px; }
-    li { font-size: 14px; color: #aaa; margin-bottom: 6px; }
-    strong { color: #e0e0e0; }
-    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
-    th { background: #1a1f2e; color: #7c9fff; padding: 10px 12px; text-align: left; border: 1px solid #2a2f40; }
-    td { padding: 10px 12px; border: 1px solid #2a2f40; color: #aaa; vertical-align: top; }
-    td a { color: #7c9fff; }
-    .highlight { background: #1a1f2e; border: 1px solid #2a2f40; border-radius: 8px; padding: 14px 16px; margin: 16px 0; font-size: 13px; color: #aaa; }
-    .warning { background: #2b220d; border: 1px solid #8b6a1a; border-radius: 8px; padding: 14px 16px; margin: 16px 0; font-size: 13px; color: #ff9800; }
-    .danger { background: #2b0d0d; border: 1px solid #8b1a1a; border-radius: 8px; padding: 14px 16px; margin: 16px 0; font-size: 13px; color: #f44336; }
-    hr { border: none; border-top: 1px solid #2a2f40; margin: 28px 0; }
-    footer { text-align: center; padding: 32px; font-size: 12px; color: #333; border-top: 1px solid #1e2335; margin-top: 40px; }
-    a { color: #7c9fff; }
-    .badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
-    .badge-gdpr { background: #1a2a4a; color: #7c9fff; border: 1px solid #2a4a7c; }
-    .badge-gmail { background: #0d2818; color: #4caf50; border: 1px solid #1a5c35; }
-  </style>
-</head>
-<body>
-  <header>
-    <div>
-      <h1>🛡️ SHOMER</h1>
-      <p>Your email guardian · Legal Documents</p>
-    </div>
-  </header>
-
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('privacy', this)">Privacy Policy</div>
-    <div class="tab" onclick="showTab('terms', this)">Terms of Service</div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- PRIVACY POLICY                                              -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <div class="content active" id="privacy">
-    <h2>Privacy Policy <span class="badge badge-gdpr">GDPR Compliant</span> <span class="badge badge-gmail">Gmail API ToS Compliant</span></h2>
-    <div class="updated">Last updated: June 22, 2026 · Version 2.0</div>
-
-    <div class="highlight">
-      <strong>Summary (plain language):</strong> Shomer analyzes your emails locally and via our servers to detect phishing and malware. We do <strong>not</strong> store your email content, sell your data, or share it with advertisers. All processing is done to provide the security service you requested — nothing else. You can delete all your data at any time.
-    </div>
-
-    <!-- 1. Identity -->
-    <h3>1. Data Controller Identity</h3>
-    <p>The data controller responsible for processing your personal data is:</p>
-    <ul>
-      <li><strong>Product:</strong> Shomer Email Guardian</li>
-      <li><strong>Developer:</strong> ShomerKing</li>
-      <li><strong>Contact:</strong> <a href="mailto:shomer.support@gmail.com">shomer.support@gmail.com</a></li>
-      <li><strong>Jurisdiction:</strong> State of Israel</li>
-    </ul>
-
-    <!-- 2. Legal Basis (GDPR Art. 6) -->
-    <h3>2. Legal Basis for Processing <span class="badge badge-gdpr">GDPR Art. 6</span></h3>
-    <p>We process your data under the following legal bases:</p>
-    <ul>
-      <li><strong>Performance of a contract (Art. 6(1)(b)):</strong> Processing email content, URLs, and file hashes is necessary to provide the phishing detection and malware scanning service you have installed and requested.</li>
-      <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Maintaining service security, preventing abuse of our scanning infrastructure, and improving detection accuracy — balanced against your right to privacy.</li>
-      <li><strong>Consent (Art. 6(1)(a)):</strong> Community Trust voting and optional Local AI processing — you can opt out at any time via Settings.</li>
-    </ul>
-
-    <!-- 3. What We Collect -->
-    <h3>3. What Data We Process</h3>
-
-    <h4>3.1 Data Processed Transiently (Never Stored on Our Servers)</h4>
-    <table>
-      <tr><th>Data Type</th><th>Purpose</th><th>Where Processed</th><th>Retention</th></tr>
-      <tr><td>Email subject line</td><td>Phishing pattern matching</td><td>Our backend (Render), then Groq AI</td><td>In-memory cache max 1 hour, then discarded</td></tr>
-      <tr><td>Sender email address &amp; domain</td><td>Domain reputation check, SPF/DKIM verification</td><td>Our backend</td><td>In-memory cache max 1 hour</td></tr>
-      <tr><td>Email body text (sanitized)</td><td>AI phishing analysis — PII automatically removed before transmission</td><td>Our backend → Groq AI</td><td>In-memory cache max 1 hour</td></tr>
-      <tr><td>URLs found in email</td><td>Malware scanning, redirect analysis</td><td>Our backend → VirusTotal, Google Safe Browsing</td><td>In-memory cache max 1 hour</td></tr>
-      <tr><td>File hash (SHA-256)</td><td>Malware detection without exposing file content</td><td>Our backend → VirusTotal</td><td>Not stored</td></tr>
-      <tr><td>File content (attachments)</td><td>Only if hash is unknown to VirusTotal — uploaded for analysis</td><td>VirusTotal servers</td><td>Per VirusTotal's policy</td></tr>
-      <tr><td>SPF / DKIM headers</td><td>Email authentication verification</td><td>Read locally by content.js</td><td>Not transmitted</td></tr>
-      <tr><td>IP address</td><td>Rate limiting and anti-abuse only</td><td>Our backend</td><td>Rolling 60-second window, then discarded</td></tr>
-    </table>
-
-    <h4>3.2 Data Stored Locally on Your Device Only</h4>
-    <p>The following data is stored exclusively in Chrome's local storage on your device and is never transmitted to our servers:</p>
-    <ul>
-      <li>Scan history (configurable: 10–100 entries)</li>
-      <li>Sender memory (which senders you've scanned)</li>
-      <li>Whitelist and blacklist of domains you define</li>
-      <li>Scan statistics and weekly reports</li>
-      <li>Your settings and preferences</li>
-      <li>Community Trust votes you have cast (domain + vote only)</li>
-    </ul>
-
-    <h4>3.3 Native Agent — Local Processing</h4>
-    <p>When using the Native Agent for file scanning or Windows Sandbox features:</p>
-    <ul>
-      <li>The Agent downloads attachment files <strong>temporarily</strong> to your device at <code>C:\Users\[you]\Desktop\SecureMailAgent\temp_[filename]</code></li>
-      <li>Files are automatically deleted after scanning or download</li>
-      <li>The Agent creates temporary script files (<code>.wsb</code>, <code>.cmd</code>) for Sandbox operation — deleted automatically after use</li>
-      <li>A debug log is written locally at <code>SecureMailAgent\debug.log</code> — contains email subjects and senders for troubleshooting. This file stays on your device only.</li>
-      <li>The Agent reads Gmail headers via Gmail API using OAuth credentials you authorized — scope: <code>gmail.readonly</code></li>
-    </ul>
-
-    <h4>3.4 Community Trust Data</h4>
-    <p>When you vote on a domain (👍 Safe / 👎 Dangerous):</p>
-    <ul>
-      <li>Only the <strong>domain name</strong> and your <strong>risk rating</strong> are sent to our database (Supabase)</li>
-      <li>Your IP address is used server-side to prevent duplicate votes — it is <strong>not stored</strong> in the database</li>
-      <li>No personal identifier is attached to your vote</li>
-      <li>You can disable Community Trust voting entirely in Settings</li>
-    </ul>
-
-    <!-- 4. Gmail API Compliance -->
-    <h3>4. Google Gmail API — Compliance Statement <span class="badge badge-gmail">Gmail API ToS</span></h3>
-    <p>Shomer's use of the Gmail API complies with <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google's API Services User Data Policy</a>, including the Limited Use requirements:</p>
-    <ul>
-      <li><strong>Limited Use:</strong> Gmail data is used solely to provide the email security scanning service. It is not used for advertising, user profiling, or any purpose unrelated to security analysis.</li>
-      <li><strong>No storage:</strong> Gmail message content is never stored on our servers beyond the in-memory cache (max 1 hour) required for technical processing.</li>
-      <li><strong>No sharing:</strong> Gmail data is not transferred to third parties except as necessary for scanning (VirusTotal for file hashes, Groq AI for sanitized text analysis). These services receive only the minimum data necessary.</li>
-      <li><strong>No human access:</strong> No Shomer employee or developer reads your email content. All processing is automated.</li>
-      <li><strong>Scope justification:</strong> The <code>gmail.readonly</code> scope is required to read email authentication headers (SPF, DKIM) and download attachments for scanning — features that cannot function with a narrower scope.</li>
-      <li><strong>Revocation:</strong> You can revoke Shomer's Gmail access at any time at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a>.</li>
-    </ul>
-
-    <!-- 5. PII Sanitization -->
-    <h3>5. Automatic PII Sanitization</h3>
-    <p>Before any email body text leaves your device, Shomer automatically replaces the following with placeholders:</p>
-    <ul>
-      <li>Credit card numbers → <code>[CARD]</code></li>
-      <li>Israeli phone numbers → <code>[PHONE]</code></li>
-      <li>Email addresses → <code>[EMAIL]@domain.com</code> (domain preserved for analysis)</li>
-      <li>Israeli ID numbers (9 digits) → <code>[ID]</code></li>
-      <li>IP addresses → <code>[IP]</code></li>
-      <li>Passwords (e.g. "password: xxx") → <code>[REDACTED]</code></li>
-    </ul>
-    <p>This sanitization is performed client-side before any data is transmitted.</p>
-
-    <!-- 6. Third-Party Services -->
-    <h3>6. Third-Party Data Processors</h3>
-    <p>We use the following sub-processors. Each receives only the minimum data necessary:</p>
-    <table>
-      <tr><th>Processor</th><th>Purpose</th><th>Data Sent</th><th>Location</th><th>Privacy Policy</th></tr>
-      <tr><td><strong>VirusTotal (Google)</strong></td><td>URL and file scanning</td><td>URL or SHA-256 file hash (file content only if unknown)</td><td>USA</td><td><a href="https://www.virustotal.com/gui/privacy-policy" target="_blank">Link</a></td></tr>
-      <tr><td><strong>Google Safe Browsing</strong></td><td>URL threat detection</td><td>URL</td><td>USA</td><td><a href="https://policies.google.com/privacy" target="_blank">Link</a></td></tr>
-      <tr><td><strong>Groq AI</strong></td><td>Phishing analysis (AI)</td><td>Sanitized email subject + body (PII removed)</td><td>USA</td><td><a href="https://groq.com/privacy-policy/" target="_blank">Link</a></td></tr>
-      <tr><td><strong>Supabase</strong></td><td>Community Trust database</td><td>Domain name + risk rating</td><td>USA</td><td><a href="https://supabase.com/privacy" target="_blank">Link</a></td></tr>
-      <tr><td><strong>Render</strong></td><td>Backend hosting</td><td>Processes all requests transiently</td><td>USA</td><td><a href="https://render.com/privacy" target="_blank">Link</a></td></tr>
-      <tr><td><strong>WhoIsXML API</strong></td><td>Domain age &amp; registration lookup</td><td>Domain name only</td><td>USA</td><td><a href="https://www.whoisxmlapi.com/privacy-policy.aspx" target="_blank">Link</a></td></tr>
-    </table>
-    <p>Data transfers to the USA are based on Standard Contractual Clauses (SCCs) where applicable, or the legitimate interest of providing the security service.</p>
-
-    <!-- 7. GDPR Rights -->
-    <h3>7. Your Rights Under GDPR <span class="badge badge-gdpr">GDPR Art. 15–22</span></h3>
-    <p>If you are located in the European Economic Area (EEA), you have the following rights:</p>
-    <ul>
-      <li><strong>Right of access (Art. 15):</strong> You can view all locally stored data in the History and Reports sections.</li>
-      <li><strong>Right to erasure (Art. 17):</strong> Delete all local data via Settings → Clear all data. Server-side cache expires automatically within 1 hour.</li>
-      <li><strong>Right to restriction (Art. 18):</strong> Disable Community Trust voting and Local AI in Settings.</li>
-      <li><strong>Right to data portability (Art. 20):</strong> Contact us at <a href="mailto:shomer.support@gmail.com">shomer.support@gmail.com</a> to request an export of any data we hold.</li>
-      <li><strong>Right to object (Art. 21):</strong> You may object to processing based on legitimate interests by contacting us. If you object to AI analysis, you can disable the extension.</li>
-      <li><strong>Right to lodge a complaint:</strong> You may lodge a complaint with your local supervisory authority. In Israel: <a href="https://www.gov.il/en/departments/the_privacy_protection_authority" target="_blank">Privacy Protection Authority</a>.</li>
-    </ul>
-    <p>To exercise any right, contact: <a href="mailto:shomer.support@gmail.com">shomer.support@gmail.com</a>. We will respond within 30 days.</p>
-
-    <!-- 8. Children -->
-    <h3>8. Children's Privacy</h3>
-    <p>Shomer is not directed at children under the age of 13 (or 16 in the EEA). We do not knowingly collect personal data from children. If you believe a child has used Shomer, please contact us and we will take appropriate steps.</p>
-
-    <!-- 9. Security -->
-    <h3>9. Security Measures</h3>
-    <ul>
-      <li>All communication between the extension and our backend uses HTTPS/TLS</li>
-      <li>API keys are stored as server-side environment variables — never in the extension code</li>
-      <li>PII is sanitized client-side before any transmission</li>
-      <li>No individual user identifiers are logged or stored server-side</li>
-      <li>Rate limiting prevents abuse of the scanning infrastructure</li>
-      <li>Supabase Row Level Security (RLS) restricts database access</li>
-    </ul>
-
-    <!-- 10. Data Retention -->
-    <h3>10. Data Retention Summary</h3>
-    <table>
-      <tr><th>Data</th><th>Retention</th><th>Location</th></tr>
-      <tr><td>Email content (processed)</td><td>Max 1 hour (in-memory cache), then auto-deleted</td><td>Our backend servers</td></tr>
-      <tr><td>IP address (anti-abuse)</td><td>60-second rolling window</td><td>Our backend (memory only)</td></tr>
-      <tr><td>Community Trust votes</td><td>Indefinitely (aggregated, no personal data)</td><td>Supabase</td></tr>
-      <tr><td>Scan history</td><td>Until you delete it (Settings → Clear)</td><td>Your device only</td></tr>
-      <tr><td>Debug log</td><td>Until you delete the file manually</td><td>Your device only</td></tr>
-    </table>
-
-    <!-- 11. Changes -->
-    <h3>11. Changes to This Policy</h3>
-    <p>We will notify users of material changes by updating the "Last updated" date and, where feasible, via an in-extension notification. Continued use after changes constitutes acceptance.</p>
-
-    <!-- 12. Contact & DPO -->
-    <h3>12. Contact</h3>
-    <p>For all privacy-related inquiries, data requests, or complaints:</p>
-    <p>📧 <a href="mailto:shomer.support@gmail.com">shomer.support@gmail.com</a></p>
-    <p>We aim to respond to all requests within <strong>30 days</strong>.</p>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- TERMS OF SERVICE                                            -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <div class="content" id="terms">
-    <h2>Terms of Service</h2>
-    <div class="updated">Last updated: June 22, 2026 · Version 2.0</div>
-
-    <h3>1. Acceptance</h3>
-    <p>By installing, activating, or using Shomer Email Guardian ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to all Terms, you must uninstall and discontinue use of the Service immediately.</p>
-    <p>These Terms constitute a legally binding agreement between you ("User") and ShomerKing ("we," "us," "our").</p>
-
-    <h3>2. Description of the Service</h3>
-    <p>Shomer is a Chrome browser extension that provides:</p>
-    <ul>
-      <li>AI-powered phishing detection and email analysis</li>
-      <li>URL scanning via VirusTotal and Google Safe Browsing</li>
-      <li>Email attachment scanning via VirusTotal</li>
-      <li>Email authentication header analysis (SPF, DKIM, DMARC)</li>
-      <li>Sender domain reputation checking</li>
-      <li>Windows Sandbox integration for safe link and file inspection</li>
-      <li>Community-based domain trust scoring</li>
-      <li>Optional local AI processing via Ollama</li>
-    </ul>
-
-    <h3>3. Eligibility</h3>
-    <p>You must be at least 13 years of age (16 in the EEA) to use the Service. By using Shomer, you represent that you meet this requirement. If you are using Shomer on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
-
-    <h3>4. License</h3>
-    <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to install and use the Service for personal, non-commercial email security purposes.</p>
-    <p>You may <strong>not</strong>:</p>
-    <ul>
-      <li>Reverse-engineer, decompile, or disassemble the Service</li>
-      <li>Modify, create derivative works from, or redistribute the Service</li>
-      <li>Use the Service to scan emails or files belonging to others without authorization</li>
-      <li>Circumvent, disable, or interfere with security features of the Service</li>
-      <li>Use automated means to abuse the scanning infrastructure or exceed rate limits</li>
-      <li>Use the Service for any unlawful purpose or in violation of any applicable law</li>
-      <li>Resell, sublicense, or commercially exploit the Service</li>
-    </ul>
-
-    <h3>5. Native Agent and Local Installation</h3>
-    <p>The optional Native Agent component installs and runs Python software on your local machine. By installing the Native Agent, you acknowledge and agree that:</p>
-    <ul>
-      <li>The Agent runs as a local process launched by Chrome's Native Messaging API</li>
-      <li>The Agent temporarily writes files to your local disk for scanning purposes — these are deleted automatically</li>
-      <li>The Agent may launch Windows Sandbox, Microsoft Edge, or other system processes</li>
-      <li>The Agent requires Google OAuth authorization to access Gmail headers and attachments</li>
-      <li>You can revoke OAuth access at any time at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a></li>
-    </ul>
-
-    <h3>6. Third-Party Services</h3>
-    <p>The Service integrates with third-party services including VirusTotal, Google Safe Browsing, Groq AI, Supabase, and WhoIsXML API. Your use of these services through Shomer is subject to their respective terms of service. We are not responsible for the availability, accuracy, or actions of these third-party services.</p>
-    <p>In particular, files uploaded to VirusTotal for analysis become subject to <a href="https://www.virustotal.com/gui/terms-of-service" target="_blank">VirusTotal's Terms of Service</a>, including potential sharing of uploaded files with security researchers.</p>
-
-    <h3>7. Community Trust Index</h3>
-    <p>The Community Trust feature allows you to contribute domain reputation data. By using this feature:</p>
-    <ul>
-      <li>You grant us a perpetual, irrevocable, royalty-free license to use your aggregated, anonymized votes to improve the Service</li>
-      <li>You agree not to manipulate the system through automated voting or coordinated abuse</li>
-      <li>Community Trust scores are provided for informational purposes only and do not constitute security guarantees</li>
-      <li>We reserve the right to remove or adjust votes that appear to be the result of abuse</li>
-    </ul>
-
-    <h3>8. Beta Service</h3>
-    <p>The Service is currently provided as a free Beta. During Beta:</p>
-    <ul>
-      <li>Features may change, be added, or be removed without notice</li>
-      <li>Service availability is not guaranteed</li>
-      <li>We may introduce paid tiers in future versions</li>
-      <li>Beta users will receive reasonable advance notice before any transition to a paid model</li>
-    </ul>
-
-    <!-- DISCLAIMER — Most Critical Section -->
-    <h3>9. Disclaimer of Warranties and Security Limitations</h3>
-    <div class="danger">
-      <strong>⚠️ CRITICAL — PLEASE READ CAREFULLY</strong>
-    </div>
-    <p style="margin-top: 12px;"><strong>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, RELIABILITY, OR NON-INFRINGEMENT.</strong></p>
-
-    <p>Without limiting the foregoing, we expressly disclaim all warranties with respect to:</p>
-    <ul>
-      <li><strong>Detection accuracy:</strong> Shomer is a probabilistic security tool. It will produce false positives (legitimate emails flagged as suspicious) and false negatives (phishing emails not detected). No security tool provides 100% detection accuracy.</li>
-      <li><strong>AI analysis:</strong> Results generated by AI models (including Groq's Llama and local Ollama models) are probabilistic recommendations, not definitive security determinations. AI models can be wrong.</li>
-      <li><strong>Third-party data:</strong> Scan results depend on VirusTotal, Google Safe Browsing, and other third-party databases which may be incomplete or outdated.</li>
-      <li><strong>Zero-day threats:</strong> The Service may not detect novel or previously unseen threats.</li>
-      <li><strong>Service availability:</strong> The Service depends on third-party infrastructure (Render, Groq, VirusTotal) and may be unavailable due to outages outside our control.</li>
-    </ul>
-
-    <div class="warning">
-      <strong>Important:</strong> All results produced by Shomer are <strong>recommendations and informational alerts only</strong> — they are not definitive security verdicts. You must exercise your own independent judgment before taking any action based on Shomer's output. Never rely solely on Shomer for security-critical decisions.
-    </div>
-
-    <h3>10. Limitation of Liability</h3>
-    <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:</strong></p>
-    <p>IN NO EVENT SHALL SHOMERKING, ITS DEVELOPERS, OFFICERS, EMPLOYEES, AGENTS, PARTNERS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:</p>
-    <ul>
-      <li>Loss of data, revenue, profits, or business</li>
-      <li>Security breaches, malware infections, or phishing attacks — whether or not Shomer was used</li>
-      <li>Financial losses resulting from actions taken or not taken based on Shomer's analysis</li>
-      <li>Damages arising from false positive or false negative scan results</li>
-      <li>Damages arising from reliance on AI-generated recommendations</li>
-      <li>Service interruptions or data loss</li>
-    </ul>
-    <p>IN JURISDICTIONS THAT DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR LIMITATION OF LIABILITY, OUR LIABILITY IS LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW. OUR TOTAL CUMULATIVE LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICE IN THE PRECEDING 12 MONTHS (OR USD $10 IF YOU HAVE NOT PAID).</p>
-
-    <h3>11. Indemnification</h3>
-    <p>You agree to indemnify, defend, and hold harmless ShomerKing and its developers from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to:</p>
-    <ul>
-      <li>Your use or misuse of the Service</li>
-      <li>Your violation of these Terms</li>
-      <li>Any decision made or action taken based on Shomer's recommendations</li>
-      <li>Your violation of any third party's rights</li>
-    </ul>
-
-    <h3>12. Intellectual Property</h3>
-    <p>The Service, including all software, algorithms, designs, and content, is the property of ShomerKing and is protected by applicable intellectual property laws. Nothing in these Terms grants you any right to use our trademarks, logos, or brand names.</p>
-
-    <h3>13. Privacy</h3>
-    <p>Your use of the Service is also governed by our <a href="#" onclick="showTab('privacy', document.querySelector('.tab')); return false;">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
-
-    <h3>14. Modifications to the Service and Terms</h3>
-    <p>We reserve the right to modify, suspend, or discontinue the Service at any time without liability. We may update these Terms at any time. Material changes will be communicated via an in-extension notification or by updating the "Last updated" date. Continued use after the effective date of changes constitutes acceptance.</p>
-
-    <h3>15. Termination</h3>
-    <p>We may suspend or terminate your access to the Service immediately, without prior notice, if you violate these Terms. Upon termination, the license granted to you terminates and you must uninstall the Service. All provisions that by their nature should survive termination will survive.</p>
-
-    <h3>16. Governing Law and Dispute Resolution</h3>
-    <p>These Terms are governed by and construed in accordance with the laws of the <strong>State of Israel</strong>, without regard to conflict of law principles. Any dispute arising from these Terms shall be subject to the exclusive jurisdiction of the competent courts of <strong>Tel Aviv, Israel</strong>.</p>
-    <p>For EEA users: Nothing in these Terms affects your rights as a consumer under applicable EU law, including the right to bring proceedings before your local courts.</p>
-
-    <h3>17. Severability</h3>
-    <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will continue in full force and effect.</p>
-
-    <h3>18. Entire Agreement</h3>
-    <p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and ShomerKing regarding the Service and supersede all prior agreements.</p>
-
-    <h3>19. Contact</h3>
-    <p>For questions about these Terms: <a href="mailto:shomer.support@gmail.com">shomer.support@gmail.com</a></p>
-
-    <div class="highlight" style="margin-top: 32px;">
-      <strong>⚖️ Legal Notice:</strong> These Terms and Privacy Policy were drafted to comply with GDPR, the Israeli Privacy Protection Law (5741-1981), and Google's API Services User Data Policy. They have not been reviewed by a licensed attorney. For commercial deployment or enterprise use, independent legal review is strongly recommended.
-    </div>
-  </div>
-
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Shomer</title>
+<style>
+:root{--bg:#0a0e1a;--surface:#141b2e;--surface2:#1c2540;--border:#2a3550;--text:#e8ecf5;--text2:#a9b3cc;--text3:#6b7694;--accent:#5b8cff;--accent2:#7aa2ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;background-image:radial-gradient(circle at 20% 10%,rgba(91,140,255,.06),transparent 40%)}
+.wrap{max-width:800px;margin:0 auto;padding:40px 24px 90px}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:36px}
+.logo-mark{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,#4a7fff,#7aa2ff);display:flex;align-items:center;justify-content:center;font-size:21px;box-shadow:0 4px 16px rgba(91,140,255,.3)}
+.logo-txt{font-size:18px;font-weight:800}.logo-txt span{color:var(--accent2)}
+.content h1{font-size:30px;font-weight:800;margin:0 0 6px;line-height:1.25}
+.content h2{font-size:20px;font-weight:700;margin:32px 0 10px;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:7px}
+.content h3{font-size:16px;font-weight:700;margin:22px 0 7px;color:var(--accent2)}
+.content p{color:var(--text2);font-size:14.5px;margin:11px 0}
+.content ul,.content ol{color:var(--text2);font-size:14.5px;margin:11px 0;padding-left:24px}
+.content li{margin:5px 0}
+.content strong{color:var(--text)}
+.content a{color:var(--accent2);text-decoration:none}.content a:hover{text-decoration:underline}
+.content code{background:var(--surface2);padding:2px 7px;border-radius:5px;font-size:13px;color:var(--accent2)}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px}
+.content th{background:var(--surface2);color:var(--text);text-align:left;padding:9px 12px;border:1px solid var(--border);font-weight:700}
+.content td{padding:9px 12px;border:1px solid var(--border);color:var(--text2)}
+.content blockquote{background:rgba(240,169,63,.08);border-left:3px solid #f0a93f;border-radius:6px;padding:11px 16px;margin:16px 0;color:var(--text2);font-size:13.5px}
+.content blockquote p{margin:0}
+.updated{color:var(--text3);font-size:13px;margin-bottom:26px}
+footer{text-align:center;color:var(--text3);font-size:12.5px;margin-top:44px;border-top:1px solid var(--border);padding-top:22px}
+footer a{color:var(--accent2);text-decoration:none}
+</style></head><body>
+<div class="wrap">
+  <div class="logo"><div class="logo-mark">🛡️</div><div class="logo-txt">Shomer<span> — Email Guardian</span></div></div>
+  <div class="content"><h1>Shomer Email Guardian — Privacy Policy</h1>
+<p><strong>Last updated: July 2026</strong>
+<strong>Contact: shomer.support@gmail.com</strong></p>
+<p>Shomer Email Guardian ("Shomer", "we") is a browser extension that helps you detect phishing emails in Gmail. This policy explains exactly what data Shomer processes, where it goes, and what never leaves your device.</p>
+<h2>1. What Shomer processes and why</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Purpose</th>
+<th>Where it is processed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email content you view (subject, sender, body text, links)</td>
+<td>Phishing analysis</td>
+<td>Locally first; sent to our analysis server only when cloud analysis is used (see §3)</td>
+</tr>
+<tr>
+<td>Email authentication headers (SPF/DKIM results)</td>
+<td>Sender verification</td>
+<td>Locally, via the optional companion app. <strong>Never sent to AI providers</strong></td>
+</tr>
+<tr>
+<td>Links found in emails</td>
+<td>Reputation checks</td>
+<td>Sent to reputation services <strong>with query parameters removed</strong> (tokens/session IDs stripped on your device)</td>
+</tr>
+<tr>
+<td>Files you drag into Manual Scan</td>
+<td>Malware scanning</td>
+<td>Hash checked against public databases; file content scanned on our server and <strong>not stored</strong></td>
+</tr>
+<tr>
+<td>Scan history, sender statistics, settings</td>
+<td>Product functionality</td>
+<td><strong>Locally only</strong> — in your browser's extension storage. Never uploaded</td>
+</tr>
+</tbody>
+</table>
+<h2>2. What is masked on your device before anything is sent</h2>
+<p>Before any email content leaves your browser, Shomer masks on your device:
+- Credit/debit card numbers → <code>[CARD]</code>
+- National ID numbers → <code>[ID]</code>
+- Phone numbers → <code>[PHONE]</code>
+- Bank account numbers (IBAN) → <code>[IBAN]</code></p>
+<p>Link query parameters (which may contain access tokens or session identifiers) are also removed on your device.</p>
+<h2>3. AI analysis</h2>
+<ul>
+<li><strong>On-device AI (when available):</strong> On supported hardware, analysis runs entirely inside Chrome using the browser's built-in AI model. In this mode, <strong>email content never leaves your device.</strong></li>
+<li><strong>Cloud AI:</strong> Otherwise, masked email content (subject, sender, masked body, stripped links) is sent over HTTPS to our analysis server, which forwards it to an AI provider — Google (Gemini API) or Groq — solely to produce a risk assessment. We use API tiers under which providers do not use your content to train their models.</li>
+<li>We do not store email content on our server. A short-lived cache (15 minutes) is kept in memory to avoid re-analyzing the same email, then discarded.</li>
+</ul>
+<h2>4. Gmail access (optional companion app)</h2>
+<p>If you install the optional companion app and connect your Google account, Shomer requests the <strong>gmail.metadata</strong> scope — access to message <strong>headers only</strong> (e.g., SPF/DKIM authentication results). Shomer cannot read message bodies or attachments through this permission.</p>
+<p>Shomer's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically: header data is used only to display sender-authentication results to you; it is never sold, never used for advertising, and <strong>never used to train AI models</strong>.</p>
+<p>Your Google access token is encrypted with Windows DPAPI and stored only on your computer. It is never transmitted to our servers.</p>
+<h2>5. Third-party services</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>What it receives</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Gemini API / Groq</td>
+<td>Masked email content</td>
+<td>AI risk analysis</td>
+</tr>
+<tr>
+<td>Google Safe Browsing</td>
+<td>Link (query-stripped)</td>
+<td>URL reputation</td>
+</tr>
+<tr>
+<td>PhishTank</td>
+<td>Link (query-stripped)</td>
+<td>Phishing database check</td>
+</tr>
+<tr>
+<td>MalwareBazaar (abuse.ch)</td>
+<td>File hash only</td>
+<td>Known-malware lookup</td>
+</tr>
+<tr>
+<td>ClamAV (our server)</td>
+<td>File content (transient)</td>
+<td>Malware scan; not stored</td>
+</tr>
+<tr>
+<td>VirusTotal</td>
+<td>File/URL — <strong>only if you add your own API key</strong></td>
+<td>Optional deep scanning under your own VirusTotal account</td>
+</tr>
+</tbody>
+</table>
+<h2>6. What we never do</h2>
+<ul>
+<li>We never sell or share your data with advertisers.</li>
+<li>We never store your emails, files, or browsing history on our servers.</li>
+<li>We never read your mailbox in the background beyond what is needed to analyze the email you are viewing (or, if you enable Auto-Scan, the newest inbox message headers).</li>
+<li>We never send unmasked personal identifiers (cards, IDs, phones) to AI providers.</li>
+</ul>
+<h2>7. Anonymous error reports</h2>
+<p>To detect breakages quickly (for example, when Gmail changes its page structure), Shomer sends anonymous error reports to our server: the technical error type, the code location, the extension version and browser version. Reports are sanitized on your device <strong>and</strong> on our server — email addresses, URLs and long numbers are removed before storage. No email content is ever included. You can disable error reporting in Settings at any time.</p>
+<h2>8. Data retention</h2>
+<ul>
+<li>Analysis cache: up to 15 minutes, in server memory only.</li>
+<li>Local history/settings: on your device, under your control — "Clear history" wipes scan history, sender statistics and cached results at any time.</li>
+<li>Companion app temp files: restricted to your Windows user account and auto-deleted within 6 hours.</li>
+</ul>
+<h2>9. Your choices</h2>
+<ul>
+<li>Use on-device AI only (when hardware supports it) — no email content leaves your browser.</li>
+<li>Disable Auto-Scan at any time.</li>
+<li>Remove the extension — all local data is deleted by Chrome; revoke Google access at https://myaccount.google.com/permissions.</li>
+</ul>
+<h2>10. Children</h2>
+<p>Shomer is not directed at children. We do not knowingly collect data from children under 13 (per COPPA), and where GDPR applies, the service is intended for users aged 16 and older. If you believe a child has used the service, contact us and we will delete any associated data.</p>
+<h2>11. Changes</h2>
+<p>We will update this page and the "Last updated" date when this policy changes. Material changes will be announced in the extension.</p>
+<h2>12. Contact</h2>
+<p>Questions or data requests: <strong>shomer.support@gmail.com</strong></p></div>
   <footer>
-    🛡️ Shomer Email Guardian · Protecting your inbox, respecting your privacy<br>
-    <span style="font-size:11px;">© 2026 ShomerKing · <a href="mailto:shomer.support@gmail.com">shomer.support@gmail.com</a></span>
+    <a href="index.html">Privacy Policy</a> · <a href="terms.html">Terms</a> ·
+    <a href="download.html">Download</a> · <a href="mailto:shomer.support@gmail.com">Support</a>
   </footer>
-
-  <script>
-    function showTab(tab, el) {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-      if (el) el.classList.add('active');
-      else document.querySelector('.tab').classList.add('active');
-      document.getElementById(tab).classList.add('active');
-    }
-  </script>
-</body>
-</html>
+</div></body></html>
