@@ -18,11 +18,19 @@
   li{margin-bottom:6px;}
   strong{color:var(--text);}
   a{color:var(--accent);}
+  .docnav{display:flex;gap:10px;margin-bottom:26px;}
+  .docnav-btn{flex:1;text-align:center;padding:11px 16px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid var(--border);background:var(--card);color:var(--text-2);transition:all .15s;}
+  .docnav-btn:hover{border-color:var(--accent);color:var(--text);}
+  .docnav-btn.active{background:linear-gradient(135deg,#3d82e8,#4b93f7);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(75,147,247,.35);}
   .foot{margin-top:34px;padding-top:16px;border-top:1px solid var(--border);color:var(--text-3);font-size:13px;}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <div class="docnav">
+    <a class="docnav-btn" href="index.html">🔒 Privacy Policy</a>
+    <a class="docnav-btn active" href="terms.html">📄 Terms of Use</a>
+  </div>
   <h1>Shomer — Terms of Use</h1>
   <div class="updated">Last updated: [DATE]</div>
 
