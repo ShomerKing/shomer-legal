@@ -26,12 +26,20 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .content blockquote p{margin:0}
 .highlight{background:rgba(47,213,132,.08);border:1px solid rgba(47,213,132,.25);border-radius:10px;padding:14px 18px;margin:18px 0}
 .highlight p{margin:0;color:var(--text2)}.highlight strong{color:var(--safe)}
+.docnav{display:flex;gap:10px;margin-bottom:30px}
+.docnav-btn{flex:1;text-align:center;padding:11px 16px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid var(--border);background:var(--surface);color:var(--text2);transition:all .15s}
+.docnav-btn:hover{border-color:var(--accent);color:var(--text)}
+.docnav-btn.active{background:linear-gradient(135deg,#4a7fff,#6b93ff);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(74,127,255,.35)}
 .updated{color:var(--text3);font-size:13px;margin-bottom:26px}
 footer{text-align:center;color:var(--text3);font-size:12.5px;margin-top:44px;border-top:1px solid var(--border);padding-top:22px}
 footer a{color:var(--accent2);text-decoration:none}
 </style></head><body>
 <div class="wrap">
   <div class="logo"><div class="logo-mark">🛡️</div><div class="logo-txt">Shomer<span> — Email Guardian</span></div></div>
+  <div class="docnav">
+    <a class="docnav-btn active" href="index.html">🔒 Privacy Policy</a>
+    <a class="docnav-btn" href="terms.html">📄 Terms of Use</a>
+  </div>
   <div class="content">
 <h1>Shomer Email Guardian — Privacy Policy</h1>
 <p class="updated"><strong>Last updated: [DATE]</strong> · Contact: shomer.support@gmail.com</p>
