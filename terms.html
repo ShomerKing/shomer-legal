@@ -31,20 +31,20 @@
   <p>By installing or using the Shomer browser extension (“Shomer”, “the extension”, “we”), you (“you”, “the user”) agree to these Terms of Use. If you do not agree, do not install or use Shomer.</p>
 
   <h2>1. What Shomer does</h2>
-  <p>Shomer is a phishing-detection assistant for webmail, built by security practitioners with hands-on experience in cybersecurity and threat detection. It analyzes the email you are viewing on your own device and shows you a risk assessment. Shomer’s results are <strong>recommendations only</strong> — they are not a guarantee of safety and are not definitive security advice. You remain responsible for your own decisions about which emails, links, and files to trust.</p>
+  <p>Shomer is a phishing-detection assistant for Gmail. It analyzes the email you are viewing on your own device and shows you a risk assessment. Shomer’s results are <strong>recommendations only</strong> — they are not a guarantee of safety and are not definitive security advice. You remain responsible for your own decisions about which emails, links, and files to trust.</p>
 
   <h2>2. What data leaves your device — and what never does</h2>
   <p>Shomer is built to be private by design. <strong>The content of your emails is never sent anywhere.</strong> Analysis of the message text happens entirely on your device.</p>
   <p>To check links and files against public threat databases, and only when the relevant feature is turned on, Shomer sends the following limited technical identifiers to its backend service:</p>
   <ul>
-    <li><strong>Link URLs</strong> — the web addresses found in an email, to check them against reputation and safe-browsing services.</li>
-    <li><strong>The sender’s domain</strong> — to look up the domain’s age.</li>
-    <li><strong>File hashes</strong> — a <strong>SHA-256 fingerprint</strong> of an attachment (computed on your device), to check it against a known-malware database. <strong>The file itself is never uploaded</strong> — only its hash.</li>
+    <li><strong>Link URLs</strong> — the web addresses found in an email, with query parameters stripped on your device, to check them against safe-browsing and reputation services.</li>
+    <li><strong>The sender’s domain</strong> — to look up the domain’s reputation.</li>
+    <li><strong>File hashes</strong> — a <strong>SHA-256 fingerprint</strong> of an attachment (computed on your device) plus the file’s extension, to check it against a known-malware database. <strong>The file itself and its full name are never sent</strong> — only the hash and extension.</li>
   </ul>
-  <p><strong>By using Shomer with these features enabled, you consent to the sending of these identifiers (URLs, sender domain, and file hashes) for the sole purpose of security analysis.</strong> You can disable link checking and attachment scanning at any time in the extension’s settings, in which case these identifiers are not sent. We do not sell your data.</p>
+  <p><strong>By using Shomer with these features enabled, you consent to the sending of these identifiers (stripped URLs, sender domain, and file hashes) for the sole purpose of security analysis.</strong> You can disable link checking and attachment scanning at any time in the extension’s settings, in which case these identifiers are not sent. We do not sell your data.</p>
 
   <h2>3. Optional on-device AI</h2>
-  <p>Shomer includes an optional on-device AI feature (Gemini Nano). When enabled, it runs locally in your browser; email content processed by it does not leave your device. It is off by default and is not required for Shomer to work.</p>
+  <p>Shomer includes an optional on-device AI feature (Gemini Nano). When enabled, it runs locally in your browser; email content processed by it does not leave your device. It is off unless you enable it and is not required for Shomer to work. Shomer does not use any cloud AI service.</p>
 
   <h2>4. Intellectual property — you may not copy Shomer</h2>
   <p>Shomer, including its detection engine, heuristics, rules, source code, user interface, designs, text, and branding, is the intellectual property of its owner and is protected by law. You agree that you will <strong>not</strong>, in whole or in part:</p>
